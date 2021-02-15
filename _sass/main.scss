@@ -1,0 +1,138 @@
+$backgroundColor: #ffffff;
+$bodyColor: #212121;
+$bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+
+$kivaGreen: #2aa967;
+$highlight: #87e4a6;
+$danger: #e04848;
+$dark:  #212121;
+$light: #ffffff;
+
+$hover--darken: darken($light, 6%);
+$hover--lighten: lighten($dark, 12%);
+
+
+$buttonRadius: 14px;
+
+
+// *{
+//   border-style: solid;
+//   border-width: 1px;
+// }
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  color:$dark;
+  cursor: pointer;
+  // ANIMATE
+  text-decoration: none;
+  background-image: 
+  linear-gradient(#1c7045, #1c7045),linear-gradient($kivaGreen, $kivaGreen), linear-gradient($highlight, $highlight);
+  background-size: 20px 2px, 100% 2px, 0 2px;
+  background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s linear, background-position 0.2s linear;
+}
+
+a:hover {
+  color: $kivaGreen;
+  background-size: 20px 2px, 0 2px, 100% 2px;
+  background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+}
+a:focus {
+  outline: none;
+  // box-shadow: 0 0 0 3px #87d9e4;
+  background-color: $highlight;
+}
+
+a.link {
+
+ background-image: initial;
+background-size: initial;
+background-position: initial;
+background-repeat: initial;
+font-family: "KivaPostGrot--medium";
+position: relative;
+color: $dark;
+padding: 14px 24px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 14px;
+cursor: pointer;
+}
+
+a.link:hover {
+  background-color: darken(white, 8%);
+
+}
+
+a.link:focus{
+  background-color: darken(white, 8%);
+
+}
+
+
+h1 {
+  font-size: 54px;
+  line-height: 125%;
+  letter-spacing: -2px;
+  font-family: "KivaPostGrot--medium";
+  margin: 32px 0 16px 0;
+
+  em {
+    font-style: normal;
+    color: $kivaGreen;
+  }
+}
+
+.title {
+  font-size: 96px;
+  letter-spacing: -3.5px;
+  line-height: 115%;
+
+  margin: 32px 0 16px 0;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: -1px;
+  font-family: "KivaPostGrot--medium";
+
+  margin: 32px 0 16px 0;
+}
+p {
+  font-size: 17px;
+  line-height: 150%;
+  font-family: "KivaPostGrot--light";
+  margin: 32px 0 16px 0;
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "KivaPostGrot--medium";
+  margin: 32px 0 16px 0;
+  text-transform: uppercase;
+
+}
+
+.parent-module {
+  padding: 128px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 128px;
+  img {
+    width: 100%;
+  }
+}

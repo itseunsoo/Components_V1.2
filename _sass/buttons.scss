@@ -1,0 +1,212 @@
+button {
+    cursor: pointer;
+}
+
+.btn--cta {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms;
+    background-color: $kivaGreen;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: $buttonRadius;
+    &:hover {
+        background-color: darken($kivaGreen, 6%);
+    }
+}
+
+.btn--cta--disabled {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    background-color: darken($light, 16%);
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: $buttonRadius;
+    cursor: auto;
+    &:focus {
+        outline: none;
+        box-shadow: none !important;
+    }
+}
+
+
+.btn--danger--disabled {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    background-color: lighten($danger, 25%);
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: $buttonRadius;
+    cursor: auto;
+    &:focus {
+        outline: none;
+        box-shadow: none !important;
+    }
+}
+
+.btn--godmode {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, $kivaGreen, #00b688, #00ce9a);
+    background-size: 200% auto;
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: $buttonRadius;
+
+    transition: background 100ms;
+    &:hover {
+        transition: 0.3s;
+        background-position: right center;
+    }
+}
+
+.btn--secondary {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms;
+    background-color: transparent;
+    border: none;
+    /* Green */
+    // border: solid $kivaGreen 1.5px;
+    // color: $kivaGreen;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: $buttonRadius;
+    box-shadow: inset 0 0 0 1.2px lighten($dark, 50%);
+    color: $dark;
+    &:hover {
+        background-color: $hover--darken;
+        box-shadow: inset 0 0 0 1.2px $dark;
+    }
+}
+
+.btn--danger {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms;
+    background-color: $danger;
+    border: none;
+    /* Green */
+    // border: solid $kivaGreen 1.5px;
+    // color: $kivaGreen;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: $buttonRadius;
+    color: $light;
+    &:hover {
+        background-color: darken($danger, 12%);
+    }
+}
+
+.btn--link {
+    font-family: "KivaPostGrot--book";
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms;
+    background-color: $dark;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: $buttonRadius;
+
+    &:hover {
+        background-color: lighten($dark, 16%);
+    }
+}
+
+.btn--pill {
+    font-family: "KivaPostGrot--medium";
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms;
+    background-color: transparent;
+    border: none;
+    color: $dark;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: darken(white, 8%);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: none !important;
+        background-color: darken(white, 8%);
+    }
+    &:active {
+        color: $kivaGreen;
+    }
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 800ms linear;
+    background-color: $light;
+    opacity: 30%;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.all-buttons {
+    button {
+        margin: 0 8px 0 0;
+    }
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px $highlight;
+}

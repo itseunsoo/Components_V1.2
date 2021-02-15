@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Happy Jekylling! - </title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+
+
+
+    <div class="parent-module">
+    <div class="left-module">
+      <h1 class=title>Financial inclusion <em>by design</em></h1>
+      <button class="btn btn--godmode">Create an account</button>
+
+
+    </div>
+
+
+    <div class="right-module">
+
+    <h1>Make a loan, change a life.</h1>
+    <h2>With Kiva you can lend as little as $25 and make a big change in someone's life.</h2>
+    <p>I'm baby squid jianbing <a href="">hella everyday</a> carry fingerstache tofu. Next level tousled mlkshk, gentrify distillery thundercats. Cold-pressed pour-over offal kale chips asymmetrical +1. Cardigan man bun photo booth hot chicken letterpress hammock selfies selvage green juice venmo retro semiotics edison bulb lumbersexual readymade. Blog artisan chambray kinfolk neutra pour-over. Four loko lomo vape artisan vexillologist gochujang.</p>
+  
+  
+    <div class="all-buttons">
+
+      <h4>God Mode Button</h4>
+      <button class="btn btn--godmode">Lend $50</button>
+
+
+      <h4>Primary/secondary buttons/danger</h4>
+      <button class="btn btn--cta">Lend now</button>
+  <button class="btn btn--secondary">Secondary</button>
+  <button class="btn btn--danger">Danger</button>
+
+  <h4>Disabled</h4>
+  <button class="btn btn--cta--disabled">Danger</button>
+  <button class="btn btn--danger--disabled">Danger</button>
+
+  <h4>links</h4>
+  <button class="btn btn--link">Look for more borrowers</button>
+
+
+
+  <h4>Pills</h4>
+<button class="btn btn--pill">Women</button>
+<button class="btn btn--pill">Arts</button>
+<button class="btn btn--pill">Agriculture</button>
+<button class="btn btn--pill">Shelter</button>
+<button class="btn btn--pill">Education</button>
+</div>
+
+
+
+
+
+
+  <h4>nav links</h4>
+  <a href="" class=link>Home</a>
+  <a href="" class=link>About</a>
+  <a href="" class=link>Lend</a>
+  <a href="" class=link>Kiva Protocol</a>
+
+  
+  
+  
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+  </body>
+</html>
+
+
+
+<script>
+  function createRipple(event) {
+    const button = event.currentTarget;
+  
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+  
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    circle.classList.add("ripple");
+  
+    const ripple = button.getElementsByClassName("ripple")[0];
+  
+    if (ripple) {
+      ripple.remove();
+    }
+  
+    button.appendChild(circle);
+  }
+  
+  const buttons = document.getElementsByTagName("button");
+  for (const button of buttons) {
+    button.addEventListener("click", createRipple);
+  }
+  
+  
+  </script>
