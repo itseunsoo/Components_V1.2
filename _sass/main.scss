@@ -4,19 +4,18 @@ $bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans
   "Segoe UI Emoji", "Segoe UI Symbol";
 
 $kivaGreen: #2aa967;
-$highlight: #87e4a6;
+$godmode: linear-gradient(to right, $kivaGreen, #00b688, #00ce9a);
+$highlight: #53e5ff;
 $danger: #e04848;
-$dark:  #212121;
+$dark: #212121;
 $light: #ffffff;
 
 $hover--darken: darken($light, 6%);
 $hover--lighten: lighten($dark, 12%);
 
-
 $buttonRadius: 14px;
 
-
-// *{
+// * {
 //   border-style: solid;
 //   border-width: 1px;
 // }
@@ -30,12 +29,12 @@ body {
 }
 
 a {
-  color:$dark;
+  color: $dark;
   cursor: pointer;
   // ANIMATE
   text-decoration: none;
-  background-image: 
-  linear-gradient(#1c7045, #1c7045),linear-gradient($kivaGreen, $kivaGreen), linear-gradient($highlight, $highlight);
+  background-image: linear-gradient(#1c7045, #1c7045), linear-gradient($kivaGreen, $kivaGreen),
+  linear-gradient(#6ec096, #6ec096);
   background-size: 20px 2px, 100% 2px, 0 2px;
   background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -49,38 +48,36 @@ a:hover {
 }
 a:focus {
   outline: none;
-  // box-shadow: 0 0 0 3px #87d9e4;
-  background-color: $highlight;
+  box-shadow: 0 0 0 3px $highlight;
+  // background-color: transparent;
 }
 
 a.link {
-
- background-image: initial;
-background-size: initial;
-background-position: initial;
-background-repeat: initial;
-font-family: "KivaPostGrot--medium";
-position: relative;
-color: $dark;
-padding: 14px 24px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-border-radius: 14px;
-cursor: pointer;
+  background-image: initial;
+  background-size: initial;
+  background-position: initial;
+  background-repeat: initial;
+  font-family: "KivaPostGrot--medium";
+  position: relative;
+  color: $dark;
+  padding: 12px 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 14px;
+  cursor: pointer;
 }
 
 a.link:hover {
-  background-color: darken(white, 8%);
-
+  background-color: darken(white, 6%);
 }
 
-a.link:focus{
-  background-color: darken(white, 8%);
-
+a.link:focus {
+  background-color: darken(white, 6%);
+  box-shadow: none;
 }
-
 
 h1 {
   font-size: 54px;
@@ -92,6 +89,9 @@ h1 {
   em {
     font-style: normal;
     color: $kivaGreen;
+    // background: $godmode;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 }
 
@@ -105,10 +105,9 @@ h1 {
 
 h2 {
   font-size: 32px;
-  line-height: 125%;
+  line-height: 150%;
   letter-spacing: -1px;
-  font-family: "KivaPostGrot--medium";
-
+  font-family: "KivaPostGrot--book";
   margin: 32px 0 16px 0;
 }
 p {
@@ -118,21 +117,143 @@ p {
   margin: 32px 0 16px 0;
 }
 
+
+h3 {
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: -1px;
+  font-family: "KivaPostGrot--book";
+  margin: 32px 0 16px 0;
+}
+
 h4 {
   font-size: 14px;
   line-height: 150%;
   font-family: "KivaPostGrot--medium";
   margin: 32px 0 16px 0;
   text-transform: uppercase;
-
 }
 
 .parent-module {
-  padding: 128px;
+  margin: auto;
+  max-width: 1200px;
+  padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 128px;
   img {
     width: 100%;
+  }
+}
+
+// .nav-links {
+//   a{
+//   font-size: 14px;
+
+//   font-family: "KivaPostGrot--book";
+
+//   }
+// }
+
+header {
+  margin: auto;
+
+  border-style: solid;
+  border-color: rgba(124, 124, 124, 0.377);
+  border-width: 0px 0px 0.5px 0;
+
+  height: 92px;
+}
+
+.header-container {
+  
+  margin: auto;
+  height: 92px;
+  max-width: 1200px;
+  display: flex;
+
+  position: relative;
+  svg {
+    height: 100%;
+    fill: $kivaGreen;
+  }
+}
+
+.logo {
+  padding: 32px;
+  width: 100%;
+  padding: 32px 0 32px 0;
+}
+
+.nav-links {
+
+  width: 100%;
+  text-align: right;
+  padding: 32px 0 32px 0;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  a {
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .parent-module {
+
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: -2px;
+    font-family: "KivaPostGrot--medium";
+    margin: 32px 0 16px 0;
+
+    em {
+      font-style: normal;
+      color: $kivaGreen;
+      // background: $godmode;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .title {
+    font-size: 72px;
+    letter-spacing: -3.5px;
+    line-height: 115%;
+
+    margin: 32px 0 16px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 125%;
+    letter-spacing: -1px;
+    font-family: "KivaPostGrot--medium";
+
+    margin: 32px 0 16px 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 150%;
+    font-family: "KivaPostGrot--light";
+    margin: 32px 0 16px 0;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 150%;
+    font-family: "KivaPostGrot--medium";
+    margin: 32px 0 16px 0;
+    text-transform: uppercase;
   }
 }
